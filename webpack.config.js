@@ -8,20 +8,26 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
-  plugins: [new HtmlWebpackPlugin({
-    filename: '../index.html',
-    scriptLoading: 'defer',
-    meta: {viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no'},
-    templateContent: `
-                      <html>
-                        <head>
-                          <title>Дипломная работа Дмитрия Купрюнина</title>
-                        </head>
-                        <body>
-                          <div id="app"></div>
-                        </body>
-                      </html>
-                    `
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: '../index.html',
+      minify: false,
+      scriptLoading: 'defer', // *read down*
+      meta: {
+        viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+      },
+      templateContent: `
+                        <html>
+                          <head>
+                            <meta charset="utf-8">
+                            <title>Дипломная работа Дмитрия Купрюнина</title>
+                            <link rel="stylesheet" href="src/css/master.css">
+                          </head>
+                          <body>
+                            <div id="app"></div>
+                          </body>
+                        </html>
+                      `
   })],
   devServer: {
     historyApiFallback: true
@@ -41,3 +47,5 @@ module.exports = {
     ]
   }
 }
+
+// gotta manually change <script scr="dist/build.js" /> in index.html
