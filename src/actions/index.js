@@ -55,7 +55,7 @@ function requestPhotos() {
 function recievePhotos(photos) {
   return {
     type: RECIEVE_PHOTOS,
-    photos: photos
+    photos
   }
 }
 

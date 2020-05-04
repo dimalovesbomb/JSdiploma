@@ -10,7 +10,6 @@ import {
 import { setLike, unsetLike, fetchPhotos, loadMorePhotos } from '../actions';
 import PreviewItemsContainer from '../components/preview-items-container';
 import FullscreenItem from '../components/fullscreen-item';
-import Unsplash from 'unsplash-js';
 import getUnsplash from '../service/unsplash';
 
 class App extends React.Component {
