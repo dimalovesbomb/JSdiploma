@@ -55,7 +55,6 @@ class App extends React.Component {
 
       <Route exact path="/jsdiploma/"
         render={ props => {
-          console.log(props);
           return <PreviewItemsContainer
                   {...props}
                   posts={this.props.posts}
