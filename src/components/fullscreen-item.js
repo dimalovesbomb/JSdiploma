@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import formateDatetime from '../service/formate-datetime';
 
 const FullscreenItem = (props) => {
+
+  if (props.post === undefined) {
+    return null;
+  }
+
   const {id, urls, likes, user, links, created_at, liked_by_user} = props.post;
   const formatedDatetime = formateDatetime(created_at);
 
@@ -25,7 +30,7 @@ const FullscreenItem = (props) => {
           <time className="fullscreen__item__props__right__date">{formatedDatetime}</time>
         </div>
       </div>
-      <Link to="/">
+      <Link to="/jsdiploma/">
         <button className="fullscreen__item__closebtn"></button>
       </Link>
     </div>

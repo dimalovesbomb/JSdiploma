@@ -53,26 +53,26 @@ class App extends React.Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/"
-          render={ props => {
-            return <PreviewItemsContainer
-                    {...props}
-                    posts={this.props.posts}
-                    handleLikeClick={this.handleLikeClick}
-                    loadMorePhotos={this.props.loadMorePhotos} />
-          }}/>
+
+      <Route exact path="/jsdiploma/"
+        render={ props => {
+          console.log(props);
+          return <PreviewItemsContainer
+                  {...props}
+                  posts={this.props.posts}
+                  handleLikeClick={this.handleLikeClick}
+                  loadMorePhotos={this.props.loadMorePhotos} />
+        }}/>
 
         <Route
-          path='/:id'
+          path='/jsdiploma/:id'
           render={ props => {
             return  <FullscreenItem
                       {...props}
                       post={this.props.posts.find(item => item.id == props.match.params.id)}
-                      handleLikeClick={this.handleLikeClick}
-                     />
-            }
-          }
-        />
+                      handleLikeClick={this.handleLikeClick}/>
+        }}/>
+
       </Switch>
     )
   }

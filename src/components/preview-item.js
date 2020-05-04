@@ -9,7 +9,7 @@ const PreviewItem = (props) => {
   return (
     <div className="preview__item">
       <div className="preview__item__picture">
-        <Link to={`/${props.id}`}>
+        <Link to={`/jsdiploma/${props.id}`}>
           <img src={img} alt="picture" />
         </Link>
       </div>

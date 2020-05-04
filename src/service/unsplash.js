@@ -9,7 +9,7 @@ function getUnsplash() {
       unsplash = new Unsplash({
           accessKey: 'GEYL3AxQuJLWhLI1aMI4i_QpOjnxsqMPfNBqmiInmTM',
           secret: 'JimgwNyVzymK1umNBoJbslLDJXNDxPRv8MpmuYcLjTE',
-          callbackUrl: 'http://localhost:8080/' //ниже
+          callbackUrl: 'http://kupriunin.ru/jsdiploma/'
       })
   }
 
@@ -17,4 +17,3 @@ function getUnsplash() {
 }
 
 export default getUnsplash;
-// адрес надо менять, когда это дело пойдет в продакшн
