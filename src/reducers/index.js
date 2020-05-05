@@ -11,7 +11,7 @@ const photos = (state = initState, action) => {
       return action.photos;
 
     case 'RECIEVE_MORE_PHOTOS':
-      return state.concat(action.photos); //тут не грязь ли?
+      return [...state, ...action.photos];
 
       case 'SET_LIKE':
         return state.map(post => {
