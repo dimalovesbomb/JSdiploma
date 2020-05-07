@@ -3,7 +3,10 @@ import Unsplash from 'unsplash-js';
 let unsplash;
 
 function getUnsplash() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3871d2d5541a77c18c4f69d4861f99fbd1a1be54
   const unsplashIsNotExist = unsplash == null;
   const unsplashIsNotInstance = (unsplash instanceof Unsplash) === false;
 
