@@ -1,3 +1,4 @@
+import './index.css';
 import React from 'react';
 import {connect} from 'react-redux';
 import { store } from '../index';
@@ -8,8 +9,8 @@ import {
   Redirect
 } from "react-router-dom";
 import { setLike, unsetLike, fetchPhotos, loadMorePhotos } from '../actions';
-import PreviewItemsContainer from '../components/preview-items-container';
-import FullscreenItem from '../components/fullscreen-item';
+import PreviewItemsContainer from '../components/preview-items-container/preview-items-container';
+import FullscreenItem from '../components/fullscreen-item/fullscreen-item';
 import getUnsplash from '../service/unsplash';
 
 class App extends React.Component {

@@ -1,0 +1,108 @@
+/* alegreya-sans-300 - latin_cyrillic */
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../css/font/alegreya-sans-v10-latin_cyrillic-300.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya Sans Light'), local('AlegreyaSans-Light'),
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-300.woff') format('woff'), /* Modern Browsers */
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-300.svg#AlegreyaSans') format('svg'); /* Legacy iOS */
+}
+/* alegreya-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../css/font/alegreya-sans-v10-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya Sans Regular'), local('AlegreyaSans-Regular'),
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-regular.svg#AlegreyaSans') format('svg'); /* Legacy iOS */
+}
+/* alegreya-sans-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../css/font/alegreya-sans-v10-latin_cyrillic-500.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya Sans Medium'), local('AlegreyaSans-Medium'),
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-500.woff') format('woff'), /* Modern Browsers */
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../css/font/alegreya-sans-v10-latin_cyrillic-500.svg#AlegreyaSans') format('svg'); /* Legacy iOS */
+}
+
+:root {
+  --like-unpressed: #EBEBE9;
+  --like-pressed: #D31D4D;
+  --background-main: #EBEBE9;
+  --background-post: #7d7c841a;
+  --shade: rgba(125,124,132,0.3);
+  --link: #4B73C8;
+  --link-hover: #4b73c8cc;
+  --font-colour: #42404B;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-main);
+  font-family: 'Alegreya Sans';
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+  content: '';
+  background-image: url('../css/img/like.png');
+  background-size: 20px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  content: '';
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  background-image: url('../css/img/like-pressed.png');
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+}
+
+input[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}

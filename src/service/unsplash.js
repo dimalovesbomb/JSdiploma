@@ -1,7 +1,9 @@
 import Unsplash from 'unsplash-js';
 
+let unsplash;
+
 function getUnsplash() {
-  let unsplash;
+
   const unsplashIsNotExist = unsplash == null;
   const unsplashIsNotInstance = (unsplash instanceof Unsplash) === false;
 
