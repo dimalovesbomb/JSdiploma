@@ -51,6 +51,12 @@ class App extends React.Component {
   }
 
   render() {
+    if (this.props.posts === undefined) {
+      return (
+        <p>loading...</p>
+      );
+    }
+
     return (
       <Switch>
 
