@@ -8,30 +8,20 @@ module.exports = {
   output: {
     filename: 'build.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: 'dist/'
+    publicPath: '/'
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'build.css',
     }),
     new HtmlWebpackPlugin({
-      filename: '../index.html',
+      filename: 'index.html',
+      template: './src/index.html',
       minify: false,
       scriptLoading: 'defer',
       meta: {
         viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-      },
-      templateContent: `
-                        <html>
-                          <head>
-                            <meta charset="utf-8">
-                            <title>Дипломная работа Дмитрия Купрюнина</title>
-                          </head>
-                          <body>
-                            <div id="app"></div>
-                          </body>
-                        </html>
-                      `
+      }
   })],
   devServer: {
     historyApiFallback: true
